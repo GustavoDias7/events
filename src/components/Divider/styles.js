@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   divider: {
-    marginVertical: 24,
+    marginVertical: 16,
     border: "1px solid #ddd",
   },
 });

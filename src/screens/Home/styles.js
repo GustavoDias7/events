@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     fontSize: 16,
   },
+  quantEvents: {
+    textAlign: "center",
+  },
 });
 
 export default styles;

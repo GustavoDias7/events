@@ -1,16 +1,26 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
+import { formatDate } from "../../utils/date";
+import styles from "./styles";
 
-const Card = () => {
+const Card = (props) => {
+  const { title, local, date, image, navigation } = props;
+
+  function handlePress() {
+    navigation.navigate("Details", { result: props });
+  }
+
   return (
-    <View>
-      <View>
-        <Image />
-      </View>
-      <View>
-        <Text>Title</Text>
-        <Text>Rio de Janeiro - RJ</Text>
-        <Text>1 de janeiro de 2022</Text>
+    <View style={styles.card}>
+      <Pressable onPress={handlePress}>
+        <View style={styles.imageWrapper}>
+          <Image style={styles.image} source={{ uri: image }} />
+        </View>
+      </Pressable>
+      <View style={styles.description}>
+        <Text>{title}</Text>
+        <Text style={styles.title}>{local}</Text>
+        <Text style={styles.text}>{formatDate(date, "dd 'de' MMMM yyyy")}</Text>
       </View>
     </View>
   );

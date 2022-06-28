@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   search: {
     position: "relative",
+    zIndex: 9,
+    elevation: 9,
   },
   resultWrapper: {
     position: "absolute",
@@ -10,6 +12,7 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 8,
     paddingVertical: 8,
+    backgroundColor: "#fff",
     boxShadow: "0px 0px 12px rgba(0, 0, 0, 0.3)",
   },
   result: {
