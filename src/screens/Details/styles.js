@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
     paddingVertical: 32,
   },
   title: {
-    marginBottom: 16,
+    fontSize: 20,
+    fontWeight: "700",
+  },
+  text: {
     fontSize: 16,
   },
 });

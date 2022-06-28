@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
-import Home from "./src/screens/Home";
+import { GlobalStorage } from "./src/context/GlobalContext";
+import MainRouter from "./src/routes/MainRouter";
 
 export default function App() {
   return (
-    <View>
-      <Home />
+    <GlobalStorage>
       <StatusBar style="auto" />
-    </View>
+      <MainRouter />
+    </GlobalStorage>
   );
 }
