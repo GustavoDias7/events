@@ -25,6 +25,9 @@ const Details = ({ route }) => {
       <Text style={styles.text}>
         <Text style={styles.bold}>Local:</Text> {details.local}
       </Text>
+      <Text style={styles.text}>
+        <Text style={styles.bold}>Ingressos:</Text> {details.ticket}
+      </Text>
     </View>
   );
 };
