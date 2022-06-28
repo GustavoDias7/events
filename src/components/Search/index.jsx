@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FlatList, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import styles from "./styles";
 import events from "../../mocks/events";
 import Input from "../Input";
