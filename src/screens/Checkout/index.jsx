@@ -13,29 +13,35 @@ const Checkout = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Text>Checkout</Text>
+      <Text style={styles.title}>Checkout</Text>
       <Formik
         initialValues={initialValues}
         validationSchema={checkoutFormSchema}
         onSubmit={handleFormSubmit}
       >
         {({ handleSubmit }) => (
-          <View>
-            <Input id="cardName" name="cardName" placeholder="Nome do cartão" />
-            <Input
-              id="cardNumber"
-              name="cardNumber"
-              placeholder="Número do cartão"
-            />
-            <Input
-              id="mature"
-              name="mature"
-              placeholder="Data de vencimento (mm/aaaa)"
-            />
-            <Input id="cvv" name="cvv" placeholder="CVV (123)" />
+          <>
+            <View style={styles.form}>
+              <Input
+                id="cardName"
+                name="cardName"
+                placeholder="Nome do cartão"
+              />
+              <Input
+                id="cardNumber"
+                name="cardNumber"
+                placeholder="Número do cartão"
+              />
+              <Input
+                id="mature"
+                name="mature"
+                placeholder="Data de vencimento (mm/aaaa)"
+              />
+              <Input id="cvv" name="cvv" placeholder="CVV (123)" />
+            </View>
 
             <Button onPress={handleSubmit} title="Finalizar compra" />
-          </View>
+          </>
         )}
       </Formik>
     </View>
