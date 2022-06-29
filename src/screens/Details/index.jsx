@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Image, Text, View } from "react-native";
+import { Button, Image, Text, View } from "react-native";
 import Divider from "../../components/Divider";
 import { formatDate } from "../../utils/date";
 import styles from "./styles";
 
-const Details = ({ route }) => {
-  const [details, setDetails] = useState(() => route.params.result);
+const Details = ({ route, navigation }) => {
+  const [details] = useState(() => route.params.result);
+
+  function handlePress() {
+    navigation.navigate("Checkout", { details });
+  }
 
   return (
     <View style={styles.container}>
@@ -17,7 +21,7 @@ const Details = ({ route }) => {
       <Divider />
       <Text style={styles.text}>
         <Text style={styles.bold}>Data:</Text>{" "}
-        {formatDate(details.date, "dd 'de' MMMM yyyy")}
+        {formatDate(details.date, "dd 'de' MMMM 'de' yyyy")}
       </Text>
       <Text style={styles.text}>
         <Text style={styles.bold}>Tipo:</Text> {details.type}
@@ -28,6 +32,8 @@ const Details = ({ route }) => {
       <Text style={styles.text}>
         <Text style={styles.bold}>Ingressos:</Text> {details.ticket}
       </Text>
+      <Divider />
+      <Button onPress={handlePress} title="Comprar agora" />
     </View>
   );
 };

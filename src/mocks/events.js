@@ -39,7 +39,7 @@ const events = [
     description:
       "Um evento onde será abordado técnicas e ferramentas para resolução de problemas.",
     date: new Date(2018, 7, 2, 10, 33, 30, 0),
-    local: "Goiás GO",
+    local: "Goiás - GO",
     type: "Empresa",
     id: "103",
     image:

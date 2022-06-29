@@ -18,9 +18,11 @@ const Card = (props) => {
         </View>
       </Pressable>
       <View style={styles.description}>
-        <Text>{title}</Text>
-        <Text style={styles.title}>{local}</Text>
-        <Text style={styles.text}>{formatDate(date, "dd 'de' MMMM yyyy")}</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.text}>{local}</Text>
+        <Text style={styles.text}>
+          {formatDate(date, "dd 'de' MMMM 'de' yyyy")}
+        </Text>
       </View>
     </View>
   );
