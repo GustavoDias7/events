@@ -1,8 +1,8 @@
 const events = [
   {
-    title: "Festa de formatura - UFRJ",
+    title: "Festa de formatura",
     description:
-      "Formatura da turma 161 da universinade federal do Rio de Janeiro.",
+      "Formatura da turma 161 da Universinade Federal do Rio de Janeiro.",
     date: new Date(2018, 11, 24),
     local: "Rio de Janeiro - RJ",
     type: "Universidade",
