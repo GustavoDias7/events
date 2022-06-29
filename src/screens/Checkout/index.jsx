@@ -6,9 +6,9 @@ import { initialValues } from "../../utils/initialValues";
 import { checkoutFormSchema } from "../../utils/schemas";
 import styles from "./styles";
 
-const Checkout = () => {
+const Checkout = ({ navigation }) => {
   async function handleFormSubmit(values) {
-    console.log(values);
+    navigation.navigate("Sucesso");
   }
 
   return (
