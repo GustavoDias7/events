@@ -1,23 +1,26 @@
+import { useField } from "formik";
 import React from "react";
-import { TextInput } from "react-native";
+import { TextInput, View } from "react-native";
+import ErrorMessage from "../ErrorMessage";
 import styles from "./styles";
 
-const Input = ({
-  onChangeText,
-  value,
-  inputAccessoryViewID,
-  placeholder,
-  ...props
-}) => {
+const Input = ({ name, id, placeholder, ...props }) => {
+  const [field, meta, helpers] = useField(name);
+
   return (
-    <TextInput
-      inputAccessoryViewID={inputAccessoryViewID}
-      onChangeText={onChangeText}
-      value={value}
-      placeholder={placeholder}
-      style={styles.input}
-      {...props}
-    />
+    <View style={styles.row}>
+      <TextInput
+        name={name}
+        id={id}
+        inputAccessoryViewID={id}
+        value={field.value}
+        onChangeText={helpers.setValue}
+        placeholder={placeholder}
+        style={styles.input}
+        {...props}
+      />
+      <ErrorMessage error={meta.error} touched={meta.touched} />
+    </View>
   );
 };
 

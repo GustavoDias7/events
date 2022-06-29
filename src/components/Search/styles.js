@@ -6,6 +6,13 @@ const styles = StyleSheet.create({
     zIndex: 9,
     elevation: 9,
   },
+  input: {
+    paddingHorizontal: 16,
+    height: 48,
+    border: "2px solid #222",
+    borderRadius: 8,
+    marginBottom: 16,
+  },
   resultWrapper: {
     position: "absolute",
     top: 56,

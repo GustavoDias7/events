@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Text, TextInput, View } from "react-native";
 import styles from "./styles";
 import events from "../../mocks/events";
-import Input from "../Input";
 
 const Search = ({ navigation }) => {
   const [search, setSearch] = useState("");
@@ -34,11 +33,12 @@ const Search = ({ navigation }) => {
 
   return (
     <View style={styles.search}>
-      <Input
-        inputAccessoryViewID="asdadasdas"
+      <TextInput
+        inputAccessoryViewID="id"
         onChangeText={handleChange}
         value={search}
         placeholder="Pesquise"
+        style={styles.input}
         onFocus={openResults}
         // onBlur={() => setShowResults(false)}
       />
